@@ -24,13 +24,7 @@ public class CliOptions {
       name = "-no-market-setup",
       handler = BooleanOptionHandler.class,
       usage = "Do not do the market setup.")
-  private boolean noMarketSetup = false;
-
-  @Option(
-      name = "-use-time-client",
-      handler = BooleanOptionHandler.class,
-      usage = "Use ledger API and time client to determine actual time")
-  private boolean useTimeClient = false;
+  private boolean noMarketSetup;
 
   @Option(
       name = "-u",
@@ -49,10 +43,6 @@ public class CliOptions {
 
   public boolean isNoMarketSetup() {
     return noMarketSetup;
-  }
-
-  public boolean useTimeClient() {
-    return useTimeClient;
   }
 
   public String[] getParties() {
